@@ -1,26 +1,29 @@
+<script setup>
+    import Logo from '@/assets/images/logo.svg'
+</script>
+
 <template>
-        <header class="navigation">
-            <nav>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li class="site-logo"><Logo class="site-logo__svg"/> </li>
-                    <li><a href="#prices">Prices</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header class="navigation">
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li class="site-logo"><Logo class="site-logo__svg"/> </li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 </template>
 
 <style scoped lang="scss">
     .navigation {
-        display: none;
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        font-family: "Metalsmith";
+        font-family: var(--font-metalsmith);
 
         ul {
             list-style: none;
@@ -32,14 +35,20 @@
 
             li {
                 padding: 10px 50px;
+                display: none;
+
+                &.site-logo {
+                    display: block;
+                }
+
+                @include respond-to("tablet-large") {
+                    display: block;
+                }
             }
 
             a {
                 color: #fff;
             }
-        }
-        @include respond-to("tablet-large") {
-            display: block;
         }
     }
 

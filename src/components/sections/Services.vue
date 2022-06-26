@@ -10,13 +10,14 @@
 <section id="services" class="section services">
     <div class="services__content">
         <article class="service"
-                 v-for="service in services">
+                 v-for="service in services"
+                 :style="{
+                     '--bg': `url(${service.bg})`
+                 }"
+        >
             <h2 class="service__title">
                 {{service.title}}
             </h2>
-            <div class="service__image">
-                <img :src="service.bg">
-            </div>
         </article>
     </div>
 </section>
@@ -53,41 +54,21 @@
         display: flex;
         align-items: center;
         position: relative;
-        padding: 5rem 0;
-
-        &__image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(var(--c-board-red),0.4);
-            }
-        }
+        padding: 5rem 1rem;
+        line-height: 1.5;
+        background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0.2)
+        ),
+        var(--bg);
+        background-size: cover;
 
         &__title {
             color: #fff;
             text-align: center;
             z-index: 999;
             width: 100%;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         &__desc {

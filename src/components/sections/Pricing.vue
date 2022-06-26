@@ -25,9 +25,11 @@
         }
 
         &__content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 100px;
+            @include respond-to("tablet-large") {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 100px;
+            }
         }
 
         &__content-item {

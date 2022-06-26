@@ -1,7 +1,6 @@
 <script setup>
     import Nav from './Nav.vue'
     import bg from '@/assets/images/lpa1.jpg'
-    import Logo from '@/assets/images/logo.svg'
     import Button from '@/components/Button.vue'
     const comingSoon = new URL('../../assets/images/coming-soon.png', import.meta.url)
 </script>
@@ -71,11 +70,15 @@
 
     &__foreground {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 50%;
         color: #fff;
         transform: translate(-50%, -60%);
         text-align: center;
+
+        @include respond-to("tablet-large") {
+            top: 60%;
+        }
     }
 
     &__title {
