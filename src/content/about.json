@@ -1,0 +1,50 @@
+{
+  "services": {
+    "title": "What we Provide",
+    "subtitle": "Do you live far away from Cicer and you always find yourself driving around Guanarteme looking for parking? Do you often drag your board all the way from the top floor of a building and bump it 10 times on your way down. Leave your board with us in a safe/secure place. You only have to care about catching waves, while your board is waiting for you 2 minutes from surf. Lock your phone and wallet in the lockers. Take a nice shower after surf and leave your wetsuit to dry at Surf Garage",
+    "tiles": [
+      {
+        "title": "Board Storage",
+        "icon": "boards"
+      },
+      {
+        "title": "Wetsuit Storage",
+        "icon": "wetsuits"
+      },
+      {
+        "title": "Showers",
+        "icon": "shower"
+      },
+      {
+        "title": "Lockers",
+        "icon": "taquilla"
+      },
+      {
+        "title": "6 - 22 Access",
+        "icon": "16"
+      }
+    ]
+  },
+  "security": {
+    "title": "Board Safety",
+    "subtitle": "Our premises has 24 hours camera surveillance connected to an alarm system. Everyone has a unique access code or a NFC bracelet to enter and exit. Based on this we know exactly when and who has been in the shop and is doing what. We also offer a proprietary board locking system so rest assured your board is safe at Surf Garage",
+    "tiles": [
+      {
+        "title": "24 Hours Surveillance",
+        "icon": "camera"
+      },
+      {
+        "title": "Access with a Unique Code",
+        "icon": "smart-lock"
+      },
+      {
+        "title": "Proprietary Board locking system",
+        "icon": "surfer"
+      },
+      {
+        "title": "Security Alarm",
+        "icon": "surfer"
+      }
+    ]
+  }
+}
