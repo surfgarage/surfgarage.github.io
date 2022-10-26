@@ -5,13 +5,12 @@
     margin: var(--section-margin);
   }
   position: relative;
-  //&:first-child {
-  //  margin-top: 50px;
-  //}
-  //&:last-child {
-  //  margin-bottom: 50px;
-  //}
+
   &__content {
+    padding: 5rem;
+  }
+
+  &__container {
     max-width: 1024px;
     margin: 0 auto;
     padding: 5rem 2.5rem;

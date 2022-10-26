@@ -1,16 +1,17 @@
 <script setup>
-    import content from '@/content/about.json'
+    import storageJson from '@/content/storage.json'
+    import securityJson from '@/content/security.json'
     import { defineAsyncComponent } from 'vue';
 
-    const services = {...content.services};
-    services.tiles = content.services.tiles.map(tile => ({
+    const storage = {...storageJson}
+    storage.tiles = storageJson.tiles.map(tile => ({
         title: tile.title,
         icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
         name: tile.icon
     }))
 
-    const security = {...content.security};
-    security.tiles = content.security.tiles.map(tile => ({
+    const security = {...securityJson}
+    security.tiles = securityJson.tiles.map(tile => ({
         title: tile.title,
         icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
         name: tile.icon
@@ -19,13 +20,13 @@
 
 <template>
     <section id="about" class="section about-services">
-        <div class="section__content">
+        <div class="section__container">
             <div class="about-services__info about-info">
-                <h2 class="about-info__title">{{services.title}}</h2>
-                <div class="about-info__subtitle">{{services.subtitle}}</div>
+                <h2 class="about-info__title">{{storage.title}}</h2>
+                <div class="about-info__subtitle">{{storage.subtitle}}</div>
             </div>
             <div class="about-services__tiles about-tiles">
-                <article v-for="tile in services.tiles" class="about-tile">
+                <article v-for="tile in storage.tiles" class="about-tile">
                     <div :class="['about-tile__icon', `about-tile__icon--${tile.name}`]">
                         <component :is="tile.icon" />
                     </div>
@@ -36,7 +37,7 @@
     </section>
 
     <section id="security" class="section about-security section--bg">
-        <div class="section__content">
+        <div class="section__container">
             <div class="about-security__info about-info">
                 <h2 class="about-info__title">{{security.title}}</h2>
                 <div class="about-info__subtitle">{{security.subtitle}}</div>
@@ -138,7 +139,7 @@
     }
 
     .about-security {
-        @include bg('@/assets/images/board-lock.jpg');
+        @include bg-fixed('@/assets/images/board-lock.jpg');
         position: relative;
         color: var(--c-white);
 

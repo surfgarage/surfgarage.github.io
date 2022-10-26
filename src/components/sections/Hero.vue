@@ -8,9 +8,9 @@
 <template>
     <section id="hero" class="section hero">
         <Nav/>
-        <img class="hero__coming-soon" :src="comingSoon" alt="Coming Soon!">
+<!--        <img class="hero__coming-soon" :src="comingSoon" alt="Coming Soon!">-->
         <div class="hero__foreground">
-            <h1 class="hero__title">a premium social club for surfers</h1>
+            <h1 class="hero__title">a premium club for surfers</h1>
             <Button additionalClass="btn__join" href="#contact">Join Now</Button>
         </div>
         <!--        <div class="hero__video-bg">-->
@@ -29,7 +29,7 @@
     width: calc(100vw - 2 * var(--section-margin-mobile));
     height: calc(100vh - 2 * var(--section-margin-mobile));
     overflow: hidden;
-    @include bg('@/assets/images/lpa1.jpg');
+    @include bg-fixed('@/assets/images/lpa1.jpg');
 
     @include respond-to("tablet-large") {
         height: calc(70vh - var(--section-margin));

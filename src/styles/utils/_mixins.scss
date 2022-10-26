@@ -62,7 +62,7 @@ position: relative;
 }
 */
 
-@mixin bg($url) {
+@mixin bg-fixed($url) {
   background-image: linear-gradient(
                   rgba(0, 0, 0, 0.4),
                   rgba(0, 0, 0, 0.4)
@@ -70,4 +70,13 @@ position: relative;
   url($url);
   background-attachment: fixed;
   background-size: cover;
+}
+
+@mixin bg-repeat($url) {
+  background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.4),
+                  rgba(0, 0, 0, 0.4)
+  ),
+  url($url);
+  background-repeat: repeat;
 }

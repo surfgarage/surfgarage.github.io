@@ -9,7 +9,7 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li class="site-logo"><Logo class="site-logo__svg"/> </li>
-                <li><a href="#prices">Prices</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -56,8 +56,8 @@
         padding: 0 30px;
 
         &__svg {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            /*height: 220px;*/
         }
     }
 
