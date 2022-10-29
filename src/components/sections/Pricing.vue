@@ -1,6 +1,6 @@
 <template>
   <section id="pricing" class="section pricing">
-    <h2 class="pricing__title">Pricing</h2>
+    <h2 class="pricing__title section__title">Pricing</h2>
     <ul class="section__content pricing__content">
       <li class="pricing__content-item">
         <h3 class="pricing__month">1 month</h3>

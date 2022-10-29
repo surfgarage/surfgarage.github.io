@@ -3,13 +3,18 @@ import content from '@/content/tiles.json'
 
 const tiles = content.map(tile => ({
   title: tile.title,
-  bg: new URL(`../../assets/tiles/${tile.bg}.jpg?url`, import.meta.url),
+  bg: new URL(`../../assets/tiles/${tile.bg}.jpg`, import.meta.url),
 }))
+
+const oddTiles = Math.abs(tiles.length % 2) === 1;
 </script>
 
 <template>
-  <section id="tiles" class="section tiles">
-    <div class="tiles__content">
+  <section id="tiles"
+           class="section tiles"
+           :class="oddTiles && 'tiles--odd'">
+    <div
+        class="tiles__content">
       <article
           class="tile"
           v-for="(tile, index) in tiles"
@@ -25,7 +30,6 @@ const tiles = content.map(tile => ({
     </div>
   </section>
 </template>
-
 
 <style lang="scss">
 .tiles {
@@ -47,6 +51,15 @@ const tiles = content.map(tile => ({
       grid-template-columns: repeat(5, 1fr);
       grid-column-gap: var(--section-margin);
       grid-row-gap: var(--section-margin);
+    }
+  }
+
+  // If there are 5 tiles, make last one full width on mobile
+  &--odd {
+    @include respond-to("not-desktop") {
+      .tile:last-child {
+        grid-column: 1/3;
+      }
     }
   }
 }

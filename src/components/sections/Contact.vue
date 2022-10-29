@@ -3,12 +3,12 @@ import whatsapp from '@/assets/icons/whatsapp.svg'
 import insta from '@/assets/icons/insta.svg'
 import maps from '@/assets/icons/map.svg'
 
-const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
+const bg = new URL(`../../assets/images/surf-bg`, import.meta.url)
 </script>
 
 <template>
   <section id="contact" class="section contact">
-    <h2 class="contact__title">
+    <h2 class="contact__title section__title">
       <span>Contact Us</span>
     </h2>
     <div class="section__content contact__content full-width">
@@ -30,11 +30,10 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
         <div class="contact__form-group">
           <input class="contact__input" placeholder="Name" id="name">
           <input class="contact__input" placeholder="Email" id="email">
-        </div>
-
-        <textarea class="contact__textarea" placeholder="Message" id="message"></textarea>
-        <div class="contact__send">
-          <button class="contact__btn-send">Send</button>
+          <textarea class="contact__textarea" placeholder="Message" id="message"></textarea>
+          <div class="contact__send">
+            <button class="contact__btn-send">Send</button>
+          </div>
         </div>
       </div>
       <div class="contact__grid-item contact__insta-widget">
@@ -54,8 +53,7 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
 .contact {
   background-color: var(--c-black);
   max-width: 100%;
-  /*background: url('@/assets/images/surf-bg.jpg?url') repeat, var(--c-black);*/
-  @include bg-repeat('@/assets/images/surf-bg.jpg?url');
+  @include bg-repeat('@/assets/images/surf-bg.jpg');
 
   &__title {
     padding-top: 50px;
@@ -74,9 +72,7 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
       display: grid;
     }
     grid-template-columns: repeat(3, 1fr);
-    /*grid-column-gap: 1rem;*/
     justify-items: center;
-    /*background: var(--c-lighter-yellow);*/
     font-family: var(--font-metalsmith);
     text-transform: lowercase;
   }
@@ -99,16 +95,20 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
     margin-bottom: 1rem;
   }
 
   &__input {
     width: 100%;
-    /*height: 4rem;*/
     padding: 1rem 2rem;
     background: var(--c-lighter-yellow);
     border: none;
     text-transform: lowercase;
+
+    @include respond-to('not-desktop') {
+      grid-column: 1/3;
+    }
   }
 
   &__textarea {
@@ -120,11 +120,12 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
     outline: none;
     outline-offset: 0;
     text-transform: lowercase;
-    margin-bottom: 0.4rem;
+    grid-column: 1/3;
   }
 
   &__send {
     text-align: right;
+    grid-column: 1/3;
 
     button {
       border: none;
@@ -155,19 +156,24 @@ const bg = new URL(`../../assets/images/surf-bg?url`, import.meta.url)
   &__insta {
     &-widget {
       background: var(--c-black);
-      width: 28rem;
-      height: 28rem;
+      width: 100%;
       margin: 0 auto;
+      padding-bottom: 66.667%; // For now only show two lines
+      position: relative;
 
       @include respond-to('tablet-large') {
-        width: 35rem;
-        height: 35rem;
+        order: -1;
       }
     }
 
     &-iframe {
       border: none;
       overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       width: 100%;
       height: 100%;
     }
