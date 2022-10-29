@@ -2,13 +2,11 @@
     import Nav from './Nav.vue'
     import bg from '@/assets/images/lpa1.jpg'
     import Button from '@/components/Button.vue'
-    const comingSoon = new URL('../../assets/images/coming-soon.png', import.meta.url)
 </script>
 
 <template>
     <section id="hero" class="section hero">
         <Nav/>
-<!--        <img class="hero__coming-soon" :src="comingSoon" alt="Coming Soon!">-->
         <div class="hero__foreground">
             <h1 class="hero__title">a premium club for surfers</h1>
             <Button additionalClass="btn__join" href="#contact">Join Now</Button>
@@ -70,15 +68,15 @@
 
     &__foreground {
         position: absolute;
-        top: 55%;
+        top: 400px;
         left: 50%;
         color: #fff;
         transform: translate(-50%, -60%);
         text-align: center;
 
-        @include respond-to("tablet-large") {
-            top: 60%;
-        }
+        //@include respond-to("tablet-large") {
+        //    top: 60%;
+        //}
     }
 
     &__title {
@@ -92,13 +90,6 @@
         margin-bottom: 2rem;
         font-family: var(--font-myriad-condensed);
         text-transform: uppercase;
-    }
-
-    &__coming-soon {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        height: 150px;
     }
 }
 </style>

@@ -1,19 +1,24 @@
 .section {
   margin: var(--section-margin-mobile);
+  position: relative;
 
   @include respond-to("tablet-large") {
     margin: var(--section-margin);
   }
-  position: relative;
 
+  /** Full width sections (with padding) **/
   &__content {
-    padding: 5rem;
-  }
-
-  &__container {
-    max-width: 1024px;
     margin: 0 auto;
-    padding: 5rem 2.5rem;
+    max-width: 1024px;
+    padding: 2rem;
+
+    &.full-width {
+      max-width: none;
+    }
+
+    @include respond-to("tablet-large") {
+      padding: 5rem 2.5rem;
+    }
   }
 
   &__bg {

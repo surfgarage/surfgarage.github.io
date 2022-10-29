@@ -24,7 +24,8 @@
         display: block;
         font-family: var(--font-myriad-semibold);
         text-transform: uppercase;
-        max-width: 250px;
+      min-width: 20rem;
+        max-width: 25rem;
         font-size: 1.8rem;
 
         &__join {

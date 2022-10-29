@@ -1,6 +1,6 @@
 <template>
     <section id="security" class="section about-security section--bg">
-        <div class="section__container">
+        <div class="section__content">
             <div class="about-security__info about-info">
                 <h2 class="about-info__title">{{security.title}}</h2>
                 <div class="about-info__subtitle">{{security.subtitle}}</div>
