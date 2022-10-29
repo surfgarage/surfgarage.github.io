@@ -1,0 +1,22 @@
+{
+  "title": "Board Safety",
+  "subtitle": "Our premises have 24 hours camera surveillance connected to an alarm system. The doors are locked using a smart lock which members can access using a personal NFC bracelet. Based on this we know exactly when and who has been in the shop and is doing what. We also offer a proprietary board locking system so rest assured your board is safe at Surf Garage.",
+  "tiles": [
+    {
+      "title": "24 Hours Surveillance",
+      "icon": "camera"
+    },
+    {
+      "title": "Waterproof bracelet to access",
+      "icon": "smart-lock"
+    },
+    {
+      "title": "Proprietary Board locking system",
+      "icon": "board-lock"
+    },
+    {
+      "title": "Security Alarm",
+      "icon": "security-alarm"
+    }
+  ]
+}

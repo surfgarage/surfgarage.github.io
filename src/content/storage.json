@@ -1,0 +1,26 @@
+{
+  "title": "Board Storage",
+  "subtitle": "Do you live far away from Cicer and you always find yourself driving around Guanarteme looking for parking? Do you often drag your board all the way from the top floor of your building and bump it everywhere on your way down. Leave your board with us in a safe/secure place. You only have to care about catching waves, while your board is waiting for you 3 minutes from surf. Lock your phone and wallet in the lockers. Take a nice shower after surf and leave your wetsuit to dry at Surf Garage.",
+  "tiles": [
+    {
+      "title": "Board Storage",
+      "icon": "boards"
+    },
+    {
+      "title": "Wetsuit Storage",
+      "icon": "wetsuits"
+    },
+    {
+      "title": "Showers",
+      "icon": "shower"
+    },
+    {
+      "title": "Lockers",
+      "icon": "taquilla"
+    },
+    {
+      "title": "6 - 22 Access",
+      "icon": "16"
+    }
+  ]
+}
