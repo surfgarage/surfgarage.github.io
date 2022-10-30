@@ -2,8 +2,7 @@
 import whatsapp from '@/assets/icons/whatsapp.svg'
 import insta from '@/assets/icons/insta.svg'
 import maps from '@/assets/icons/map.svg'
-
-const bg = new URL(`../../assets/images/surf-bg`, import.meta.url)
+import ContactForm from '@/components/ContactForm.vue'
 </script>
 
 <template>
@@ -27,14 +26,7 @@ const bg = new URL(`../../assets/images/surf-bg`, import.meta.url)
         </a>
       </div>
       <div class="contact__grid-item contact__form">
-        <div class="contact__form-group">
-          <input class="contact__input" placeholder="Name" id="name">
-          <input class="contact__input" placeholder="Email" id="email">
-          <textarea class="contact__textarea" placeholder="Message" id="message"></textarea>
-          <div class="contact__send">
-            <button class="contact__btn-send">Send</button>
-          </div>
-        </div>
+        <ContactForm/>
       </div>
       <div class="contact__grid-item contact__insta-widget">
         <!-- SnapWidget -->
@@ -72,6 +64,7 @@ const bg = new URL(`../../assets/images/surf-bg`, import.meta.url)
       display: grid;
     }
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
     justify-items: center;
     font-family: var(--font-metalsmith);
     text-transform: lowercase;
@@ -85,56 +78,12 @@ const bg = new URL(`../../assets/images/surf-bg`, import.meta.url)
     }
   }
 
+  &__form {
+    width: 100%;
+  }
+
   &__address {
     color: var(--c-lighter-yellow);;
-  }
-
-  // Form Fields
-  &__form-group {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  &__input {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: var(--c-lighter-yellow);
-    border: none;
-    text-transform: lowercase;
-
-    @include respond-to('not-desktop') {
-      grid-column: 1/3;
-    }
-  }
-
-  &__textarea {
-    width: 100%;
-    height: 15rem;
-    padding: 1rem 2rem;
-    background: #d4a84b;
-    border: none;
-    outline: none;
-    outline-offset: 0;
-    text-transform: lowercase;
-    grid-column: 1/3;
-  }
-
-  &__send {
-    text-align: right;
-    grid-column: 1/3;
-
-    button {
-      border: none;
-      background: var(--c-lighter-yellow);
-      color: var(--c-black);
-      padding: 1rem 2rem;
-      cursor: pointer;
-      text-transform: lowercase;
-    }
   }
 
   &__link {
