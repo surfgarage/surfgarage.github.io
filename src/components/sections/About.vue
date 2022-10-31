@@ -1,36 +1,38 @@
 <script setup>
-import storageJson from '@/content/storage.json'
-import securityJson from '@/content/security.json'
+// import storageJson from '@/content/storage.json'
+// import securityJson from '@/content/security.json'
 import {defineAsyncComponent} from 'vue';
 
-const storage = {...storageJson}
-storage.tiles = storageJson.tiles.map(tile => ({
-  title: tile.title,
-  icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
-  name: tile.icon
-}))
-
-const security = {...securityJson}
-security.tiles = securityJson.tiles.map(tile => ({
-  title: tile.title,
-  icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
-  name: tile.icon
-}))
+// const storage = {...storageJson}
+// storage.tiles = storageJson.tiles.map(tile => ({
+//   title: tile.title,
+//   icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
+//   name: tile.icon
+// }))
+//
+// const security = {...securityJson}
+// security.tiles = securityJson.tiles.map(tile => ({
+//   title: tile.title,
+//   icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
+//   name: tile.icon
+// }))
+const storageTiles = ['boards', 'wetsuits', 'shower', 'lockers', 'access']
+const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
 </script>
 
 <template>
   <section id="about" class="section about-services">
     <div class="section__content">
       <div class="about-services__info about-info">
-        <h2 class="about-info__title">{{ storage.title }}</h2>
-        <div class="about-info__subtitle">{{ storage.subtitle }}</div>
+        <h2 class="about-info__title">{{ $t('storage.title') }}</h2>
+        <div class="about-info__subtitle">{{ $t('storage.subtitle') }}</div>
       </div>
       <div class="about-services__tiles about-tiles">
-        <article v-for="(tile, index) in storage.tiles" :key="index" class="about-tile">
-          <div :class="['about-tile__icon', `about-tile__icon--${tile.name}`]">
-            <component :is="tile.icon"/>
+        <article v-for="(tile, index) in storageTiles" :key="index" class="about-tile">
+          <div :class="['about-tile__icon', `about-tile__icon--${tile}`]">
+            <component :is="defineAsyncComponent(() => import(`../../assets/icons/${tile}.svg`))"/>
           </div>
-          <h3 class="about-tile__title">{{ tile.title }}</h3>
+          <h3 class="about-tile__title">{{ $t(`storage.tiles.${tile}`) }}</h3>
         </article>
       </div>
     </div>
@@ -39,15 +41,15 @@ security.tiles = securityJson.tiles.map(tile => ({
   <section id="security" class="section about-security section--bg">
     <div class="section__content">
       <div class="about-security__info about-info">
-        <h2 class="about-info__title">{{ security.title }}</h2>
-        <div class="about-info__subtitle">{{ security.subtitle }}</div>
+        <h2 class="about-info__title">{{ $t('security.title') }}</h2>
+        <div class="about-info__subtitle">{{ $t('security.subtitle') }}</div>
       </div>
       <div class="about-security__tiles about-tiles">
-        <article v-for="(tile, index) in security.tiles" :key="index" class="about-tile">
-          <div :class="['about-tile__icon', `about-tile__icon--${tile.name}`]">
-            <component :is="tile.icon"/>
+        <article v-for="(tile, index) in securityTiles" :key="index" class="about-tile">
+          <div :class="['about-tile__icon', `about-tile__icon--${tile}`]">
+            <component :is="defineAsyncComponent(() => import(`../../assets/icons/${tile}.svg`))"/>
           </div>
-          <h3 class="about-tile__title">{{ tile.title }}</h3>
+          <h3 class="about-tile__title">{{ $t(`security.tiles.${tile}`) }}</h3>
         </article>
       </div>
     </div>

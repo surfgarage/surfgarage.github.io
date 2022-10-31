@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "A premium club for surfers",
+    "join-now": "Join Now"
+  },
+  "tiles": {
+    "storage": "Board Storage",
+    "lockers": "Lockers",
+    "second-hand": "Second Hand Boards",
+    "board-repair": "Board Repairs",
+    "surf-art": "Surf Art"
+  },
+  "storage": {
+    "title": "Board Storage",
+    "subtitle": "Do you live far away from Cicer and you always find yourself driving around Guanarteme looking for parking? Do you often drag your board all the way from the top floor of your building and bump it everywhere on your way down. Leave your board with us in a safe/secure place. You only have to care about catching waves, while your board is waiting for you 3 minutes from surf. Lock your phone and wallet in the lockers. Take a nice shower after surf and leave your wetsuit to dry at Surf Garage.",
+    "tiles": {
+      "boards": "Board Storage",
+      "wetsuits": "Wetsuit Storage",
+      "shower": "Showers",
+      "lockers": "Lockers",
+      "access": "6 - 22 Access"
+    }
+  },
+  "security": {
+    "title": "Board Safety",
+    "subtitle": "Our premises have 24 hours camera surveillance connected to an alarm system. The doors are locked using a smart lock which members can access using a personal NFC bracelet. Based on this we know exactly when and who has been in the shop and is doing what. We also offer a proprietary board locking system so rest assured your board is safe at Surf Garage.",
+    "tiles": {
+      "camera": "24 Hours Surveillance",
+      "smart-lock": "Waterproof bracelet to access",
+      "board-lock": "Proprietary Board locking system",
+      "security-alarm": "Security Alarm",
+    }
+  }
+}

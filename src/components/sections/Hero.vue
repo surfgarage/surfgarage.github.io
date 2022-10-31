@@ -8,8 +8,8 @@
     <section id="hero" class="section hero">
         <Nav/>
         <div class="hero__foreground">
-            <h1 class="hero__title">a premium club for surfers</h1>
-            <Button additionalClass="btn__join" href="#contact">Join Now</Button>
+            <h1 class="hero__title">{{ $t('hero.title') }}</h1>
+            <Button additionalClass="btn__join" href="#contact">{{ $t('hero.join-now') }}</Button>
         </div>
         <!--        <div class="hero__video-bg">-->
         <!--        <iframe src="https://www.youtube.com/embed/Vqq3NEuJGps?modestbranding=1&controls=0&autoplay=1&mute=1&loop=1"-->
@@ -83,6 +83,7 @@
         font-size: 3rem;
         margin-bottom: 2rem;
         font-family: var(--font-metalsmith);
+      text-transform: lowercase;
     }
 
     &__subtitle {
