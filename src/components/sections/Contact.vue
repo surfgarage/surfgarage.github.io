@@ -8,7 +8,7 @@ import ContactForm from '@/components/ContactForm.vue'
 <template>
   <section id="contact" class="section contact">
     <h2 class="contact__title section__title">
-      <span>Contact Us</span>
+      <span>{{  $t('contact.title') }}</span>
     </h2>
     <div class="section__content contact__content full-width">
       <div class="contact__grid-item contact__links">

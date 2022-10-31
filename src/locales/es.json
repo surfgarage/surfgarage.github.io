@@ -34,7 +34,27 @@
       "camera": "Vigilancia 24 Horas",
       "smart-lock": "Pulsera Impermeable",
       "board-lock": "Sistema de bloqueo de tablas",
-      "security-alarm": "Sistema de alarma",
+      "security-alarm": "Sistema de alarma"
+    }
+  },
+  "pricing":  {
+    "title": "Precios",
+    "monthly": {
+      "title": "1 mes",
+      "price": "€35/mes"
+    },
+    "3months": {
+      "title": "3 meses",
+      "price": "€30/mes"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "contact": "Email/Numero de telefono",
+      "message": "Mensaje",
+      "send": "Enviar"
     }
   }
 }

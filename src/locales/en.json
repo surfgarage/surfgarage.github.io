@@ -36,5 +36,25 @@
       "board-lock": "Proprietary Board locking system",
       "security-alarm": "Security Alarm",
     }
+  },
+  "pricing":  {
+    "title": "Pricing",
+    "monthly": {
+      "title": "1 month",
+      "price": "€35/month"
+    },
+    "3months": {
+      "title": "3 months",
+      "price": "€30/month"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Name",
+      "contact": "Email/Phone Number",
+      "message": "Message",
+      "send": "Send"
+    }
   }
 }
