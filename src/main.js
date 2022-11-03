@@ -3,15 +3,25 @@ import App from './App.vue'
 import i18n from '../i18n.js'
 import Home from './pages/Home.vue'
 import {createRouter, createWebHistory} from 'vue-router'
+import { h, resolveComponent } from "vue";
 
-const routes = [
+const routes = [{
+        path: '/',
+        redirect: `/${i18n.getLocale()}`
+    },
     {
         path: '/:lang',
-        children: [{
-            path: '/', name: 'home', component: Home
-        }]
+        name: 'home',
+        component: Home
     }
 ]
+
+// component: {
+//     render: () => h(resolveComponent("router-view")),
+//         children: [{
+//         path: '/', name: 'home', component: Home
+//     }]
+// }
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,10 +31,12 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     let language = to.params.lang;
     if (!language) {
-        language = i18n.locale
+        language = 'es'
     }
 
-    i18n.locale = language
+    // i18n.locale = language
+    // i18n.global.locale.value = language
+    i18n.setLocale(language)
     next()
 })
 

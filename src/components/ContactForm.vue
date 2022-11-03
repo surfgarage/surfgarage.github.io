@@ -22,9 +22,9 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
 
 <template>
   <form class="contact-form" :action="endpoint" method="POST">
-    <input class="contact-form__input" :placeholder="$t('contact.form.name')" id="name" v-model="name">
-    <input class="contact-form__input" :placeholder="$t('contact.form.contact')" id="contact" v-model="contact">
-    <textarea class="contact-form__textarea" :placeholder="$t('contact.form.message')" id="message" v-model="message"></textarea>
+    <input class="contact-form__input" :placeholder="$t('contact.form.name')" name="name">
+    <input class="contact-form__input" :placeholder="$t('contact.form.contact')" name="contact">
+    <textarea class="contact-form__textarea" :placeholder="$t('contact.form.message')" name="message"></textarea>
     <div class="contact-form__send">
       <button type="submit" class="contact-form__btn-send">{{ $t('contact.form.send') }}</button>
     </div>
