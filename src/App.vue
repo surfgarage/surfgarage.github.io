@@ -1,19 +1,9 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
-import i18n from '../i18n.js'
-const { locale, t } = useI18n({
-  inheritLocale: true
-})
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 </script>
 
 <template>
-  <form>
-    <label>{{ t('language') }}</label>
-    <select v-model="i18n.global.locale.value">
-      <option value="en">en</option>
-      <option value="es">es</option>
-    </select>
-  </form>
+  <LanguageSwitcher/>
   <router-view></router-view>
 </template>
 
