@@ -53,7 +53,8 @@
     "title": "Contacto",
     "form": {
       "name": "Nombre",
-      "contact": "Email/Numero de telefono",
+      "email": "Email",
+      "phone": "Numero de Telefono",
       "message": "Mensaje",
       "send": "Enviar"
     }

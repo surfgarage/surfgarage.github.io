@@ -22,10 +22,27 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
 
 <template>
   <form class="contact-form" :action="endpoint" method="POST">
-    <input class="contact-form__input" :placeholder="$t('contact.form.name')" name="name">
-    <input class="contact-form__input" :placeholder="$t('contact.form.contact')" name="contact">
-    <textarea class="contact-form__textarea" :placeholder="$t('contact.form.message')" name="message"></textarea>
-    <div class="contact-form__send">
+    <input class="contact-form__input"
+           :placeholder="$t('contact.form.name')"
+           name="name"
+           style="grid-area: name"
+    >
+    <input class="contact-form__input"
+           :placeholder="$t('contact.form.email')"
+           name="email"
+           style="grid-area: email"
+    >
+    <input class="contact-form__input"
+           :placeholder="$t('contact.form.phone')"
+           name="phone"
+           style="grid-area: phone"
+    >
+    <textarea class="contact-form__textarea"
+              :placeholder="$t('contact.form.message')"
+              name="message"
+              style="grid-area: message"
+    ></textarea>
+    <div class="contact-form__send" style="grid-area: send">
       <button type="submit" class="contact-form__btn-send">{{ $t('contact.form.send') }}</button>
     </div>
   </form>
@@ -36,7 +53,25 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
   width: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-template-areas:
+    "name"
+    "phone"
+    "email"
+    "message"
+    "send";
+
+  grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+
+  @include respond-to("tablet-large") {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas:
+    "name name name"
+    "phone email email"
+    "message message message"
+    ". . send";
+  }
+
   margin-bottom: 1rem;
   align-content: stretch;
 
@@ -69,6 +104,11 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
       padding: 1rem 2rem;
       cursor: pointer;
       text-transform: lowercase;
+      width: 100%;
+
+      @include respond-to("tablet-large") {
+        width: auto;
+      }
     }
   }
 }
