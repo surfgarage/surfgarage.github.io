@@ -1,9 +1,7 @@
 <script setup>
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 </script>
 
 <template>
-  <LanguageSwitcher/>
   <router-view></router-view>
 </template>
 

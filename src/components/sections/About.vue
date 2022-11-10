@@ -148,7 +148,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
   background-size: 200px;
   background-attachment: fixed;
   color: var(--c-white);
-  margin-bottom: 10rem;
+  //margin-bottom: 10rem;
 
   &__info {
     grid-template-columns: 1fr 3fr;

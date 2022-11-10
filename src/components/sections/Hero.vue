@@ -2,11 +2,13 @@
     import Nav from './Nav.vue'
     import bg from '@/assets/images/lpa1.jpg'
     import Button from '@/components/Button.vue'
+    import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 </script>
 
 <template>
     <section id="hero" class="section hero">
         <Nav/>
+        <LanguageSwitcher class="hero__language-switcher"/>
         <div class="hero__foreground">
             <h1 class="hero__title">{{ $t('hero.title') }}</h1>
             <Button additionalClass="btn__join" href="#contact">{{ $t('hero.join-now') }}</Button>
@@ -92,5 +94,11 @@
         font-family: var(--font-myriad-condensed);
         text-transform: uppercase;
     }
+
+  &__language-switcher {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 </style>
