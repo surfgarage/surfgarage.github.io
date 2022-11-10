@@ -54,7 +54,7 @@
     "form": {
       "name": "Nombre",
       "email": "Email",
-      "phone": "Numero de Telefono",
+      "phone": "Telefono",
       "message": "Mensaje",
       "send": "Enviar"
     }

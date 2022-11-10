@@ -28,14 +28,15 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
            style="grid-area: name"
     >
     <input class="contact-form__input"
+           :placeholder="$t('contact.form.phone')"
+           type="tel"
+           name="phone"
+           style="grid-area: phone"
+    >
+    <input class="contact-form__input"
            :placeholder="$t('contact.form.email')"
            name="email"
            style="grid-area: email"
-    >
-    <input class="contact-form__input"
-           :placeholder="$t('contact.form.phone')"
-           name="phone"
-           style="grid-area: phone"
     >
     <textarea class="contact-form__textarea"
               :placeholder="$t('contact.form.message')"
