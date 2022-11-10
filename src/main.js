@@ -4,6 +4,7 @@ import i18n from '../i18n.js'
 import Home from './pages/Home.vue'
 import {createRouter, createWebHistory, createWebHashHistory} from 'vue-router'
 import { h, resolveComponent } from "vue";
+import VueGtag from 'vue-gtag';
 
 const routes = [{
         path: '/',
@@ -43,4 +44,9 @@ router.beforeEach((to, from, next) => {
 createApp(App)
     .use(router)
     .use(i18n)
+    .use(VueGtag, {
+        config: { id: 'G-X2753YKFNC' },
+        router,
+        enabled: true,
+    })
     .mount('#app')
