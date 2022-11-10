@@ -1,11 +1,32 @@
 <script setup>
-import content from '@/content/tiles.json'
+// import content from '@/content/tiles.json'
+//
+// const tiles = content.map(tile => ({
+//   title: tile.title,
+//   bg: new URL(`../../assets/tiles/${tile.bg}.jpg`, import.meta.url),
+// }))
 
-const tiles = content.map(tile => ({
-  title: tile.title,
-  bg: new URL(`../../assets/tiles/${tile.bg}.jpg`, import.meta.url),
-}))
-
+const tiles = [{
+    name: "storage",
+    bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url)
+  },
+  {
+    name: "lockers",
+    bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url)
+  },
+  {
+    name: "second-hand",
+    bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url)
+  },
+  {
+    name: "board-repair",
+    bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url)
+  },
+  {
+    name: "surf-art",
+    bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url)
+  }
+]
 const oddTiles = Math.abs(tiles.length % 2) === 1;
 </script>
 
@@ -13,8 +34,7 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
   <section id="tiles"
            class="section tiles"
            :class="oddTiles && 'tiles--odd'">
-    <div
-        class="tiles__content">
+    <div class="tiles__content">
       <article
           class="tile"
           v-for="(tile, index) in tiles"
@@ -24,7 +44,7 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
            }"
       >
         <h2 class="tile__title">
-          {{ tile.title }}
+          {{ $t(`tiles.${tile.name}`) }}
         </h2>
       </article>
     </div>

@@ -1,14 +1,14 @@
 <template>
   <section id="pricing" class="section pricing">
-    <h2 class="pricing__title section__title">Pricing</h2>
+    <h2 class="pricing__title section__title">{{$t('pricing.title')}}</h2>
     <ul class="section__content pricing__content">
       <li class="pricing__content-item">
-        <h3 class="pricing__month">1 month</h3>
-        <h4 class="pricing__price">€ 35/month</h4>
+        <h3 class="pricing__month">{{ $t('pricing.monthly.title') }}</h3>
+        <h4 class="pricing__price">{{$t('pricing.monthly.price')}}</h4>
       </li>
       <li class="pricing__content-item">
-        <h3 class="pricing__month">3 months</h3>
-        <h4 class="pricing__price">€ 30/month</h4>
+        <h3 class="pricing__month">{{ $t('pricing.3months.title') }}</h3>
+        <h4 class="pricing__price">{{$t('pricing.3months.price')}}</h4>
       </li>
     </ul>
   </section>

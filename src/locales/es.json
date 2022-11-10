@@ -1,0 +1,61 @@
+{
+  "language": "Español",
+  "nav": {
+    "about": "Sobre Nosotros",
+    "services": "Que Ofrecemos",
+    "pricing": "Precios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Un club premium para surfistas",
+    "join-now": "Únete ahora"
+  },
+  "tiles": {
+    "storage": "Guardatablas",
+    "lockers": "Taquillas",
+    "second-hand": "Tablas de Segunda Mano",
+    "board-repair": "Reparación de Tablas",
+    "surf-art": "Surf Art"
+  },
+  "storage": {
+    "title": "Guarda Tablas",
+    "subtitle": "¿Vives lejos de la Cicer y siempre te encuentras dando vueltas por Guanarteme buscando aparcamiento? ¿A menudo bajas tu tabla desde el último piso de tu edificio y la golpeas por todas partes al bajar? Deja tu tabla con nosotros en un lugar seguro. Solo debes preocuparte por coger olas, mientras tu tabla te espera a 3 minutos de surf. Guarda tu teléfono y tu cartera en nuestras taquillas. Toma una buena ducha después de surfear y deja tu neopreno secando en Surf Garage.",
+    "tiles": {
+      "boards": "Guardatablas",
+      "wetsuits": "Storage de Neoprenos",
+      "shower": "Duchas",
+      "lockers": "Taquillas",
+      "access": "Acceso 6 - 22"
+    }
+  },
+  "security": {
+    "title": "Seguridad",
+    "subtitle": "Nuestras instalaciones cuentan con cámaras de vigilancia 24 horas conectadas a un sistema de alarma. Las puertas se cierran con una cerradura inteligente a la que los socios pueden acceder mediante una pulsera NFC personal. Gracias a esto, sabemos exactamente cuándo y quién ha estado en la tienda y qué está haciendo. También ofrecemos un sistema patentado de bloqueo de tablas, por lo que puedes estar tranquilo sabiendo que tu tabla está segura en Surf Garage.",
+    "tiles": {
+      "camera": "Vigilancia 24 Horas",
+      "smart-lock": "Pulsera Impermeable",
+      "board-lock": "Sistema de bloqueo de tablas",
+      "security-alarm": "Sistema de alarma"
+    }
+  },
+  "pricing":  {
+    "title": "Precios",
+    "monthly": {
+      "title": "1 mes",
+      "price": "€35/mes"
+    },
+    "3months": {
+      "title": "3 meses",
+      "price": "€30/mes"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "contact": "Email/Numero de telefono",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
+  }
+}
