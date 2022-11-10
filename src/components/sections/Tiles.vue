@@ -1,10 +1,4 @@
 <script setup>
-// import content from '@/content/tiles.json'
-//
-// const tiles = content.map(tile => ({
-//   title: tile.title,
-//   bg: new URL(`../../assets/tiles/${tile.bg}.jpg`, import.meta.url),
-// }))
 
 const tiles = [{
     name: "storage",

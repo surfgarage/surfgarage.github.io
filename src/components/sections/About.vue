@@ -1,21 +1,6 @@
 <script setup>
-// import storageJson from '@/content/storage.json'
-// import securityJson from '@/content/security.json'
-import {defineAsyncComponent} from 'vue';
 
-// const storage = {...storageJson}
-// storage.tiles = storageJson.tiles.map(tile => ({
-//   title: tile.title,
-//   icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
-//   name: tile.icon
-// }))
-//
-// const security = {...securityJson}
-// security.tiles = securityJson.tiles.map(tile => ({
-//   title: tile.title,
-//   icon: defineAsyncComponent(() => import(`../../assets/icons/${tile.icon}.svg`)),
-//   name: tile.icon
-// }))
+import {defineAsyncComponent} from 'vue';
 const storageTiles = ['boards', 'wetsuits', 'shower', 'lockers', 'access']
 const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
 </script>
