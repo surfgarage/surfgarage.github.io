@@ -1,7 +1,8 @@
 <script setup>
     import Nav from './Nav.vue'
     import bg from '@/assets/images/lpa1.jpg'
-    import Button from '@/components/Button.vue'
+    import arrowDown from '@/assets/icons/chevron-down.svg'
+    import ScrollTo from '@/components/ScrollTo.vue'
     import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 </script>
 
@@ -11,8 +12,11 @@
         <LanguageSwitcher class="hero__language-switcher"/>
         <div class="hero__foreground">
             <h1 class="hero__title">{{ $t('hero.title') }}</h1>
-            <Button additionalClass="btn__join" href="#contact">{{ $t('hero.join-now') }}</Button>
+            <ScrollTo additionalClass="btn__join" to="contact">{{ $t('hero.join-now') }}</ScrollTo>
         </div>
+      <a href="#tiles" class="hero__arrow">
+        <arrowDown class="hero__arrow-icon"/>
+      </a>
         <!--        <div class="hero__video-bg">-->
         <!--        <iframe src="https://www.youtube.com/embed/Vqq3NEuJGps?modestbranding=1&controls=0&autoplay=1&mute=1&loop=1"-->
         <!--                title="YouTube video player"-->
@@ -75,6 +79,7 @@
         color: #fff;
         transform: translate(-50%, -60%);
         text-align: center;
+      width: 80%;
 
         //@include respond-to("tablet-large") {
         //    top: 60%;
@@ -99,6 +104,24 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  &__arrow {
+    width: 6rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond-to(tablet-large) {
+      display: none;
+    }
+  }
+
+  &__arrow-icon {
+    width: 100%;
+    fill: var(--c-white);
   }
 }
 </style>

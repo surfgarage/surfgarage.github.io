@@ -1,6 +1,7 @@
 .section {
   margin: var(--section-margin-mobile);
   position: relative;
+  scroll-margin-top: var(--section-margin);
 
   @include respond-to("tablet-large") {
     margin: var(--section-margin);

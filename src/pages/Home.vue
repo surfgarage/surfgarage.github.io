@@ -12,7 +12,3 @@ import Tiles from '@/components/sections/Tiles.vue'
   <Pricing />
   <Contact />
 </template>
-
-<style lang="scss">
-
-</style>

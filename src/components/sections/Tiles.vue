@@ -2,22 +2,27 @@
 
 const tiles = [{
     name: "storage",
+  link: "#about",
     bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url)
   },
   {
     name: "lockers",
+    link: "#about",
     bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url)
   },
   {
     name: "second-hand",
+    link: "#about",
     bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url)
   },
   {
     name: "board-repair",
+    link: "#about",
     bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url)
   },
   {
     name: "surf-art",
+    link: "#about",
     bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url)
   }
 ]
@@ -29,18 +34,19 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
            class="section tiles"
            :class="oddTiles && 'tiles--odd'">
     <div class="tiles__content">
-      <article
-          class="tile"
-          v-for="(tile, index) in tiles"
-          :key="index"
-          :style="{
-               '--bg': `url(${tile.bg})`
-           }"
-      >
-        <h2 class="tile__title">
-          {{ $t(`tiles.${tile.name}`) }}
-        </h2>
-      </article>
+      <template v-for="(tile, index) in tiles" :key="index">
+        <a
+            class="tile"
+            :href="tile.link"
+            :style="{
+                 '--bg': `url(${tile.bg})`
+             }"
+        >
+          <h2 class="tile__title">
+            {{ $t(`tiles.${tile.name}`) }}
+          </h2>
+        </a>
+      </template>
     </div>
   </section>
 </template>

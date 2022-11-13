@@ -9,6 +9,9 @@
 @import './styles/base.scss';
     #app {
         // Hack to show the margin below the last section
-        overflow: auto;
+        overflow-y: scroll;
     }
+html {
+
+}
 </style>
