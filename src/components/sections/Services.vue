@@ -6,7 +6,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
 </script>
 
 <template>
-  <section id="about" class="section about-services">
+  <section id="services" class="section about-services">
     <div class="section__content">
       <div class="about-services__info about-info">
         <h2 class="about-info__title">{{ $t('storage.title') }}</h2>

@@ -28,7 +28,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
   .bm-menu {
     background-color: var(--c-black);
     line-height: 2;
-    a {
+    ul a {
       color: var(--c-white);
     }
 

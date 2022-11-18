@@ -1,28 +1,30 @@
 <script setup>
 
+import ScrollTo from "../ScrollTo.vue";
+
 const tiles = [{
     name: "storage",
-  link: "#about",
+    link: "services",
     bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url)
   },
   {
     name: "lockers",
-    link: "#about",
+    link: "services",
     bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url)
   },
   {
     name: "second-hand",
-    link: "#about",
+    link: "services",
     bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url)
   },
   {
     name: "board-repair",
-    link: "#about",
+    link: "services",
     bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url)
   },
   {
     name: "surf-art",
-    link: "#about",
+    link: "services",
     bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url)
   }
 ]
@@ -35,9 +37,9 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
            :class="oddTiles && 'tiles--odd'">
     <div class="tiles__content">
       <template v-for="(tile, index) in tiles" :key="index">
-        <a
+        <ScrollTo
             class="tile"
-            :href="tile.link"
+            :to="tile.link"
             :style="{
                  '--bg': `url(${tile.bg})`
              }"
@@ -45,7 +47,7 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
           <h2 class="tile__title">
             {{ $t(`tiles.${tile.name}`) }}
           </h2>
-        </a>
+        </ScrollTo>
       </template>
     </div>
   </section>
