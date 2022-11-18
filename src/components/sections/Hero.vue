@@ -1,5 +1,5 @@
 <script setup>
-    import Nav from './Nav.vue'
+    import DesktopMenu from '../menu/DesktopMenu.vue'
     import bg from '@/assets/images/lpa1.jpg'
     import arrowDown from '@/assets/icons/chevron-down.svg'
     import ScrollTo from '@/components/ScrollTo.vue'
@@ -7,16 +7,16 @@
 </script>
 
 <template>
-    <section id="hero" class="section hero">
-        <Nav/>
+    <section id="about" class="section hero">
+        <DesktopMenu/>
         <LanguageSwitcher class="hero__language-switcher"/>
         <div class="hero__foreground">
             <h1 class="hero__title">{{ $t('hero.title') }}</h1>
-            <ScrollTo additionalClass="btn__join" to="contact">{{ $t('hero.join-now') }}</ScrollTo>
+            <ScrollTo class="button__join" linkType="button" to="contact">{{ $t('hero.join-now') }}</ScrollTo>
         </div>
-      <a href="#tiles" class="hero__arrow">
+      <ScrollTo to="tiles" class="hero__arrow">
         <arrowDown class="hero__arrow-icon"/>
-      </a>
+      </ScrollTo>
         <!--        <div class="hero__video-bg">-->
         <!--        <iframe src="https://www.youtube.com/embed/Vqq3NEuJGps?modestbranding=1&controls=0&autoplay=1&mute=1&loop=1"-->
         <!--                title="YouTube video player"-->
@@ -123,5 +123,9 @@
     width: 100%;
     fill: var(--c-white);
   }
+}
+
+.button__join {
+  margin: 30px auto 0;
 }
 </style>

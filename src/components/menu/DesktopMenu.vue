@@ -1,24 +1,14 @@
 <script setup>
-import Logo from '@/assets/images/logo.svg'
+import Nav from '@/components/menu/Nav.vue'
 </script>
 
 <template>
-  <header class="navigation">
-    <nav>
-      <ul>
-        <li><a href="#about">{{ $t('nav.about') }}</a></li>
-        <li><a href="#services">{{ $t('nav.services') }}</a></li>
-        <li class="site-logo">
-          <Logo class="site-logo__svg"/>
-        </li>
-        <li><a href="#pricing">{{ $t('nav.pricing') }}</a></li>
-        <li><a href="#contact">{{ $t('nav.contact') }}</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navigation">
+    <Nav :showLogo="true"/>
+  </nav>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .navigation {
   position: absolute;
   top: 0;
@@ -29,7 +19,6 @@ import Logo from '@/assets/images/logo.svg'
 
   ul {
     list-style: none;
-
     font-size: 20px;
     justify-content: center;
     align-items: center;
