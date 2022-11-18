@@ -1,5 +1,5 @@
 <script setup>
-    import Nav from './Nav.vue'
+    import DesktopMenu from '../menu/DesktopMenu.vue'
     import bg from '@/assets/images/lpa1.jpg'
     import arrowDown from '@/assets/icons/chevron-down.svg'
     import ScrollTo from '@/components/ScrollTo.vue'
@@ -8,7 +8,7 @@
 
 <template>
     <section id="hero" class="section hero">
-        <Nav/>
+        <DesktopMenu/>
         <LanguageSwitcher class="hero__language-switcher"/>
         <div class="hero__foreground">
             <h1 class="hero__title">{{ $t('hero.title') }}</h1>
