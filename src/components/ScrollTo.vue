@@ -1,22 +1,22 @@
 <script setup>
-import {toRefs} from "vue";
+import { toRefs } from "vue";
 
 const props = defineProps({
   to: {
     type: String,
-    required: true
+    required: true,
   },
   linkType: {
     type: String,
-    required: false
-  }
-})
-const {to} = toRefs(props);
+    required: false,
+  },
+});
+const { to } = toRefs(props);
 
 const scrollIntoView = (e) => {
-  document.getElementById(to.value).scrollIntoView({behavior: "smooth"})
-  e.preventDefault()
-}
+  document.getElementById(to.value).scrollIntoView({ behavior: "smooth" });
+  e.preventDefault();
+};
 </script>
 <template>
   <a :class="linkType" :href="`#${to}`" @click="scrollIntoView">
@@ -25,15 +25,15 @@ const scrollIntoView = (e) => {
 </template>
 
 <style lang="scss">
-  .button {
-    border: 2px solid white;
-    padding: 12px 50px;
-    color: white;
-    display: block;
-    font-family: var(--font-myriad-semibold);
-    text-transform: uppercase;
-    min-width: 20rem;
-    max-width: 25rem;
-    font-size: 1.8rem;
-  }
+.button {
+  border: 2px solid white;
+  padding: 12px 50px;
+  color: white;
+  display: block;
+  font-family: var(--font-myriad-semibold);
+  text-transform: uppercase;
+  min-width: 20rem;
+  max-width: 25rem;
+  font-size: 1.8rem;
+}
 </style>

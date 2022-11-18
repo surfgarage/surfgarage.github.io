@@ -1,10 +1,10 @@
 <script setup>
-import Nav from '@/components/menu/Nav.vue'
+import Nav from "@/components/menu/Nav.vue";
 </script>
 
 <template>
   <nav class="navigation">
-    <Nav :showLogo="true"/>
+    <Nav :showLogo="true" />
   </nav>
 </template>
 
@@ -58,5 +58,4 @@ import Nav from '@/components/menu/Nav.vue'
     /*height: 220px;*/
   }
 }
-
 </style>

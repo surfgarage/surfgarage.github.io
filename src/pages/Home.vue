@@ -1,15 +1,15 @@
 <script setup>
-import Hero from '../components/sections/Hero.vue'
-import Contact from '../components/sections/Contact.vue'
-import Services from '../components/sections/Services.vue'
-import Pricing from '../components/sections/Pricing.vue'
-import Tiles from '../components/sections/Tiles.vue'
-import HamburgerMenu from '../components/menu/HamburgerMenu.vue';
+import Hero from "../components/sections/Hero.vue";
+import Contact from "../components/sections/Contact.vue";
+import Services from "../components/sections/Services.vue";
+import Pricing from "../components/sections/Pricing.vue";
+import Tiles from "../components/sections/Tiles.vue";
+import HamburgerMenu from "../components/menu/HamburgerMenu.vue";
 </script>
 <template>
-  <HamburgerMenu/>
+  <HamburgerMenu />
   <main id="page-wrap">
-    <Hero/>
+    <Hero />
     <Tiles />
     <Services />
     <Pricing />

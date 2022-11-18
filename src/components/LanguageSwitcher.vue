@@ -1,5 +1,5 @@
 <script setup>
-import i18n from '../../i18n.js'
+// import i18n from "../../i18n.js";
 // import { useRouter } from 'vue-router'
 // const router = useRouter()
 // const onChange = (e) => {
@@ -14,10 +14,10 @@ import i18n from '../../i18n.js'
 </script>
 <template>
   <div>
-<!--    <select @change="onChange" v-model="i18n.global.locale.value">-->
-<!--      <option value="en">en</option>-->
-<!--      <option value="es">es</option>-->
-<!--    </select>-->
+    <!--    <select @change="onChange" v-model="i18n.global.locale.value">-->
+    <!--      <option value="en">en</option>-->
+    <!--      <option value="es">es</option>-->
+    <!--    </select>-->
     <div class="language-switcher">
       <router-link to="/en">EN</router-link>
       <router-link to="/es">ES</router-link>
@@ -34,7 +34,7 @@ import i18n from '../../i18n.js'
     margin-right: 1rem;
 
     &.router-link-active {
-      color: var(--c-lighter-yellow)
+      color: var(--c-lighter-yellow);
     }
   }
 }

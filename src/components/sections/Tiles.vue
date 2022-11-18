@@ -1,48 +1,46 @@
 <script setup>
-
 import ScrollTo from "../ScrollTo.vue";
 
-const tiles = [{
+const tiles = [
+  {
     name: "storage",
     link: "services",
-    bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url)
+    bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url),
   },
   {
     name: "lockers",
     link: "services",
-    bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url)
+    bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url),
   },
   {
     name: "second-hand",
     link: "services",
-    bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url)
+    bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url),
   },
   {
     name: "board-repair",
     link: "services",
-    bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url)
+    bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url),
   },
   {
     name: "surf-art",
     link: "services",
-    bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url)
-  }
-]
+    bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url),
+  },
+];
 const oddTiles = Math.abs(tiles.length % 2) === 1;
 </script>
 
 <template>
-  <section id="tiles"
-           class="section tiles"
-           :class="oddTiles && 'tiles--odd'">
+  <section id="tiles" class="section tiles" :class="oddTiles && 'tiles--odd'">
     <div class="tiles__content">
       <template v-for="(tile, index) in tiles" :key="index">
         <ScrollTo
-            class="tile"
-            :to="tile.link"
-            :style="{
-                 '--bg': `url(${tile.bg})`
-             }"
+          class="tile"
+          :to="tile.link"
+          :style="{
+            '--bg': `url(${tile.bg})`,
+          }"
         >
           <h2 class="tile__title">
             {{ $t(`tiles.${tile.name}`) }}
@@ -94,11 +92,8 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
   position: relative;
   padding: 5rem 1rem;
   line-height: 1.5;
-  background-image: linear-gradient(
-          rgba(0, 0, 0, 0.2),
-          rgba(0, 0, 0, 0.2)
-  ),
-  var(--bg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    var(--bg);
   background-size: cover;
 
   &__title {

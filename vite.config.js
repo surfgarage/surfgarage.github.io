@@ -1,11 +1,11 @@
-import { fileURLToPath, URL } from 'node:url'
-import svgLoader from 'vite-svg-loader'
+import { fileURLToPath, URL } from "node:url";
+import svgLoader from "vite-svg-loader";
 
-import { defineConfig } from 'vite'
-import { resolve, dirname } from 'node:path'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueI18n from '@intlify/vite-plugin-vue-i18n'
+import { defineConfig } from "vite";
+import { resolve, dirname } from "node:path";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import vueI18n from "@intlify/vite-plugin-vue-i18n";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,20 +18,23 @@ export default defineConfig({
       // compositionOnly: false,
 
       // you need to set i18n resource including paths !
-      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
-    })
+      include: resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        "./src/locales/**"
+      ),
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
   },
-  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png'],
+  assetsInclude: ["**/*.jpg", "**/*.jpeg", "**/*.png"],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/utils/_mixins.scss";`
-      }
-    }
-  }
-})
+        additionalData: `@import "./src/styles/utils/_mixins.scss";`,
+      },
+    },
+  },
+});

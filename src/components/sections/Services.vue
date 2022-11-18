@@ -1,21 +1,30 @@
 <script setup>
-
-import {defineAsyncComponent} from 'vue';
-const storageTiles = ['boards', 'wetsuits', 'shower', 'lockers', 'access']
-const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
+import { defineAsyncComponent } from "vue";
+const storageTiles = ["boards", "wetsuits", "shower", "lockers", "access"];
+const securityTiles = ["camera", "smart-lock", "board-lock", "security-alarm"];
 </script>
 
 <template>
   <section id="services" class="section about-services">
     <div class="section__content">
       <div class="about-services__info about-info">
-        <h2 class="about-info__title">{{ $t('storage.title') }}</h2>
-        <div class="about-info__subtitle">{{ $t('storage.subtitle') }}</div>
+        <h2 class="about-info__title">{{ $t("storage.title") }}</h2>
+        <div class="about-info__subtitle">{{ $t("storage.subtitle") }}</div>
       </div>
       <div class="about-services__tiles about-tiles">
-        <article v-for="(tile, index) in storageTiles" :key="index" class="about-tile">
+        <article
+          v-for="(tile, index) in storageTiles"
+          :key="index"
+          class="about-tile"
+        >
           <div :class="['about-tile__icon', `about-tile__icon--${tile}`]">
-            <component :is="defineAsyncComponent(() => import(`../../assets/icons/${tile}.svg`))"/>
+            <component
+              :is="
+                defineAsyncComponent(() =>
+                  import(`../../assets/icons/${tile}.svg`)
+                )
+              "
+            />
           </div>
           <h3 class="about-tile__title">{{ $t(`storage.tiles.${tile}`) }}</h3>
         </article>
@@ -26,13 +35,23 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
   <section id="security" class="section about-security section--bg">
     <div class="section__content">
       <div class="about-security__info about-info">
-        <h2 class="about-info__title">{{ $t('security.title') }}</h2>
-        <div class="about-info__subtitle">{{ $t('security.subtitle') }}</div>
+        <h2 class="about-info__title">{{ $t("security.title") }}</h2>
+        <div class="about-info__subtitle">{{ $t("security.subtitle") }}</div>
       </div>
       <div class="about-security__tiles about-tiles">
-        <article v-for="(tile, index) in securityTiles" :key="index" class="about-tile">
+        <article
+          v-for="(tile, index) in securityTiles"
+          :key="index"
+          class="about-tile"
+        >
           <div :class="['about-tile__icon', `about-tile__icon--${tile}`]">
-            <component :is="defineAsyncComponent(() => import(`../../assets/icons/${tile}.svg`))"/>
+            <component
+              :is="
+                defineAsyncComponent(() =>
+                  import(`../../assets/icons/${tile}.svg`)
+                )
+              "
+            />
           </div>
           <h3 class="about-tile__title">{{ $t(`security.tiles.${tile}`) }}</h3>
         </article>
@@ -47,7 +66,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
   margin-bottom: 3rem;
   margin-top: 3rem;
 
-  @include respond-to('tablet-large') {
+  @include respond-to("tablet-large") {
     display: grid;
     margin-top: 0;
   }
@@ -59,7 +78,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
     text-align: center;
     margin-bottom: 2rem;
 
-    @include respond-to('tablet-large') {
+    @include respond-to("tablet-large") {
       font-size: 5rem;
       text-align: left;
     }
@@ -82,7 +101,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
   justify-content: center;
   align-items: start;
 
-  @include respond-to('tablet-large') {
+  @include respond-to("tablet-large") {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-column-gap: 2rem;
   }
@@ -100,7 +119,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
     margin: 0 auto;
     text-align: center;
 
-    @include respond-to('tablet-large') {
+    @include respond-to("tablet-large") {
       margon-bottom: 1rem;
     }
 
@@ -129,7 +148,8 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
 }
 
 .about-services {
-  background: url('@/assets/images/surf-pattern.svg') repeat, var(--c-amber-yellow);
+  background: url("@/assets/images/surf-pattern.svg") repeat,
+    var(--c-amber-yellow);
   background-size: 200px;
   background-attachment: fixed;
   color: var(--c-white);
@@ -141,7 +161,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
 }
 
 .about-security {
-  @include bg-fixed('@/assets/images/board-lock.jpg');
+  @include bg-fixed("@/assets/images/board-lock.jpg");
   position: relative;
   color: var(--c-white);
 
@@ -149,7 +169,7 @@ const securityTiles = ['camera', 'smart-lock', 'board-lock', 'security-alarm']
     grid-template-columns: 4fr 1fr;
   }
 
-  @include respond-to('tablet-large') {
+  @include respond-to("tablet-large") {
     .about-info__title {
       order: 2;
       text-align: right;

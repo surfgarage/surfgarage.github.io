@@ -1,5 +1,5 @@
 <script setup>
-const endpoint = 'https://formspree.io/f/xwkzrzpj'
+const endpoint = "https://formspree.io/f/xwkzrzpj";
 // TODO: Move this to axios submit (but need to implement recaptcha myself)
 // import {ref} from "vue";
 // import axios from 'axios'
@@ -22,29 +22,35 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
 
 <template>
   <form class="contact-form" :action="endpoint" method="POST">
-    <input class="contact-form__input"
-           :placeholder="$t('contact.form.name')"
-           name="name"
-           style="grid-area: name"
-    >
-    <input class="contact-form__input"
-           :placeholder="$t('contact.form.phone')"
-           type="tel"
-           name="phone"
-           style="grid-area: phone"
-    >
-    <input class="contact-form__input"
-           :placeholder="$t('contact.form.email')"
-           name="email"
-           style="grid-area: email"
-    >
-    <textarea class="contact-form__textarea"
-              :placeholder="$t('contact.form.message')"
-              name="message"
-              style="grid-area: message"
+    <input
+      class="contact-form__input"
+      :placeholder="$t('contact.form.name')"
+      name="name"
+      style="grid-area: name"
+    />
+    <input
+      class="contact-form__input"
+      :placeholder="$t('contact.form.phone')"
+      type="tel"
+      name="phone"
+      style="grid-area: phone"
+    />
+    <input
+      class="contact-form__input"
+      :placeholder="$t('contact.form.email')"
+      name="email"
+      style="grid-area: email"
+    />
+    <textarea
+      class="contact-form__textarea"
+      :placeholder="$t('contact.form.message')"
+      name="message"
+      style="grid-area: message"
     ></textarea>
     <div class="contact-form__send" style="grid-area: send">
-      <button type="submit" class="contact-form__btn-send">{{ $t('contact.form.send') }}</button>
+      <button type="submit" class="contact-form__btn-send">
+        {{ $t("contact.form.send") }}
+      </button>
     </div>
   </form>
 </template>
@@ -67,10 +73,10 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 3fr 1fr;
     grid-template-areas:
-    "name name name"
-    "phone email email"
-    "message message message"
-    ". . send";
+      "name name name"
+      "phone email email"
+      "message message message"
+      ". . send";
   }
 
   margin-bottom: 1rem;
@@ -88,7 +94,7 @@ const endpoint = 'https://formspree.io/f/xwkzrzpj'
     width: 100%;
     height: 100%;
     padding: 1rem 2rem;
-    background: var(--c-lighter-yellow);;
+    background: var(--c-lighter-yellow);
     border: none;
     outline: none;
     outline-offset: 0;

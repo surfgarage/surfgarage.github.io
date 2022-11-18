@@ -1,20 +1,19 @@
 <script setup>
-import { Push } from 'vue3-burger-menu'
-import Nav from '@/components/menu/Nav.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { Push } from "vue3-burger-menu";
+import Nav from "@/components/menu/Nav.vue";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 </script>
 
 <template>
   <div class="hamburger-menu">
     <Push :closeOnNavigation="true" left>
-      <Nav :showLogo="false"/>
-      <LanguageSwitcher class="hero__language-switcher"/>
+      <Nav :showLogo="false" />
+      <LanguageSwitcher class="hero__language-switcher" />
     </Push>
   </div>
 </template>
 
 <style lang="scss">
-
 .hamburger-menu {
   .bm-burger-button {
     z-index: 999;
@@ -32,7 +31,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
       color: var(--c-white);
     }
 
-    .bm-item-list>* {
+    .bm-item-list > * {
       display: block;
     }
 
