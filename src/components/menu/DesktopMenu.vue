@@ -1,10 +1,28 @@
 <script setup>
 import Nav from "@/components/menu/Nav.vue";
+import Logo from "@/assets/images/logo.svg";
+import ScrollTo from "@/components/ScrollTo.vue";
 </script>
 
 <template>
   <nav class="navigation">
-    <Nav :showLogo="true" />
+    <ul>
+      <li>
+        <ScrollTo to="storage">{{ $t("nav.storage") }}</ScrollTo>
+      </li>
+      <li>
+        <ScrollTo to="security">{{ $t("nav.security") }}</ScrollTo>
+      </li>
+      <li class="site-logo">
+        <Logo class="site-logo__svg" />
+      </li>
+      <li>
+        <ScrollTo to="pricing">{{ $t("nav.pricing") }}</ScrollTo>
+      </li>
+      <li>
+        <ScrollTo to="contact">{{ $t("nav.contact") }}</ScrollTo>
+      </li>
+    </ul>
   </nav>
 </template>
 

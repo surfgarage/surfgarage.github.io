@@ -5,13 +5,13 @@ const securityTiles = ["camera", "smart-lock", "board-lock", "security-alarm"];
 </script>
 
 <template>
-  <section id="services" class="section about-services">
+  <section id="storage" class="section about-storage">
     <div class="section__content">
-      <div class="about-services__info about-info">
+      <div class="about-storage__info about-info">
         <h2 class="about-info__title">{{ $t("storage.title") }}</h2>
         <div class="about-info__subtitle">{{ $t("storage.subtitle") }}</div>
       </div>
-      <div class="about-services__tiles about-tiles">
+      <div class="about-storage__tiles about-tiles">
         <article
           v-for="(tile, index) in storageTiles"
           :key="index"
@@ -147,7 +147,7 @@ const securityTiles = ["camera", "smart-lock", "board-lock", "security-alarm"];
   }
 }
 
-.about-services {
+.about-storage {
   background: url("@/assets/images/surf-pattern.svg") repeat,
     var(--c-amber-yellow);
   background-size: 200px;

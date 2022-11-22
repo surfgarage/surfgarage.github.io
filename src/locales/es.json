@@ -3,6 +3,8 @@
   "nav": {
     "about": "Sobre Nosotros",
     "services": "Que Ofrecemos",
+    "storage": "Guardatablas",
+    "security": "Seguridad",
     "pricing": "Precios",
     "contact": "Contacto"
   },
@@ -29,7 +31,7 @@
     }
   },
   "security": {
-    "title": "Seguridad",
+    "title": "Seguridad de tu tabla",
     "subtitle": "Nuestras instalaciones cuentan con cámaras de vigilancia 24 horas conectadas a un sistema de alarma. Las puertas se cierran con una cerradura inteligente a la que los socios pueden acceder mediante una pulsera NFC personal. Gracias a esto, sabemos exactamente cuándo y quién ha estado en la tienda y qué está haciendo. También ofrecemos un sistema patentado de bloqueo de tablas, por lo que puedes estar tranquilo sabiendo que tu tabla está segura en Surf Garage.",
     "tiles": {
       "camera": "Vigilancia 24 Horas",
