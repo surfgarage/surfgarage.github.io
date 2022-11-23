@@ -5,6 +5,7 @@ import Home from "./pages/Home.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 // import { h, resolveComponent } from "vue";
 import VueGtag from "vue-gtag";
+import 'virtual:windi.css'
 
 const routes = [
   {
