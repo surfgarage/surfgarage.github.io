@@ -2,6 +2,7 @@
 import { Push } from "vue3-burger-menu";
 import ScrollTo from "@/components/ScrollTo.vue";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import ContactLinks from "@/components/ContactLinks.vue";
 </script>
 
 <template>
@@ -27,7 +28,8 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
           <ScrollTo to="contact">{{ $t("nav.contact") }}</ScrollTo>
         </li>
       </ul>
-      <LanguageSwitcher class="hero__language-switcher" />
+      <ContactLinks class="hamburger-menu__links"/>
+
     </Push>
   </div>
 </template>
@@ -55,16 +57,35 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
   .bm-menu {
     background-color: var(--c-black);
     line-height: 2;
-    ul a {
-      color: var(--c-white);
+    padding-top: 1rem;
+
+    ul {
+      margin-left: 1rem;
+      a {
+        color: var(--c-white);
+
+        &:hover {
+          color: var(--c-amber-yellow);
+        }
+      }
     }
 
-    .bm-item-list > * {
-      display: block;
+    .bm-item-list {
+      margin-left: 0;
+      > * {
+        display: block;
+      }
     }
 
     .site-logo {
       display: none;
+    }
+  }
+
+  .contact-links__link {
+    color: var(--c-white);
+    &:hover {
+      color: var(--c-amber-yellow);
     }
   }
 }

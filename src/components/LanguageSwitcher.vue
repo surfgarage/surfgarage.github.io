@@ -1,4 +1,10 @@
 <script setup>
+defineProps({
+  showLanguageName: {
+    type: Boolean,
+    required: false,
+  },
+});
 // import i18n from "../../i18n.js";
 // import { useRouter } from 'vue-router'
 // const router = useRouter()
@@ -11,6 +17,7 @@
 //     })
 //   }
 // }
+
 </script>
 <template>
   <div>
@@ -19,8 +26,8 @@
     <!--      <option value="es">es</option>-->
     <!--    </select>-->
     <div class="language-switcher">
-      <router-link to="/en">EN</router-link>
-      <router-link to="/es">ES</router-link>
+      <router-link to="/en">{{showLanguageName ? 'English' : 'EN'}}</router-link>
+      <router-link to="/es">{{showLanguageName ? 'Español' : 'ES'}}</router-link>
     </div>
   </div>
 </template>

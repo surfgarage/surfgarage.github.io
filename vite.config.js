@@ -28,6 +28,9 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+    dedupe: [
+      'vue'
+    ]
   },
   assetsInclude: ["**/*.jpg", "**/*.jpeg", "**/*.png"],
   css: {
