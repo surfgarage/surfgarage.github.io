@@ -1,8 +1,6 @@
 <script setup>
-import whatsapp from "@/assets/icons/whatsapp.svg";
-import insta from "@/assets/icons/insta.svg";
-import maps from "@/assets/icons/map.svg";
 import ContactForm from "@/components/ContactForm.vue";
+import ContactLinks from "@/components/ContactLinks.vue";
 </script>
 
 <template>
@@ -11,32 +9,7 @@ import ContactForm from "@/components/ContactForm.vue";
       <span>{{ $t("contact.title") }}</span>
     </h2>
     <div class="section__content contact__content full-width">
-      <div class="contact__grid-item contact__links">
-        <a
-          class="contact__link contact__link--maps"
-          href="https://goo.gl/maps/8qRXWmk34xwfq5Hz7"
-          target="_blank"
-        >
-          <maps class="contact__maps-icon" />
-          <span>Calle Castillejos 54 Bajo, LPA</span>
-        </a>
-        <a
-          class="contact__link contact__link--whatsapp"
-          href="https://wa.link/9ihwiv"
-          target="_blank"
-        >
-          <whatsapp class="contact__whatsapp-icon" />
-          <span>+34631356939</span>
-        </a>
-        <a
-          class="contact__link contact__link--insta"
-          href="https://www.instagram.com/surfgaragelpa/"
-          target="_blank"
-        >
-          <insta class="contact__insta-icon" />
-          <span>@surfgaragelpa</span>
-        </a>
-      </div>
+      <ContactLinks class="contact__grid-item contact__links"/>
       <div class="contact__grid-item contact__form">
         <ContactForm />
       </div>
@@ -100,19 +73,19 @@ import ContactForm from "@/components/ContactForm.vue";
     color: var(--c-lighter-yellow);
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-
+  .contact-links__link {
     span {
       background: var(--c-lighter-yellow);
       padding: 0 1rem;
       margin-left: 1rem;
+      color: var(--c-black);
+      border: 1px solid transparent;
     }
 
-    span {
-      color: var(--c-black);
+    &:hover span {
+      background: transparent;
+      color: var(--c-lighter-yellow);
+      border-color: var(--c-lighter-yellow);
     }
   }
 

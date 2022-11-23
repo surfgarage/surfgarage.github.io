@@ -2,13 +2,13 @@
 import DesktopMenu from "../menu/DesktopMenu.vue";
 import arrowDown from "@/assets/icons/chevron-down.svg";
 import ScrollTo from "@/components/ScrollTo.vue";
-import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import ContactLinks from "@/components/ContactLinks.vue";
 </script>
 
 <template>
   <section id="about" class="section hero">
     <DesktopMenu />
-    <LanguageSwitcher class="hero__language-switcher" />
+    <ContactLinks class="hero__contact-links" :onlyIcons="true" />
     <div class="hero__foreground">
       <h1 class="hero__title">{{ $t("hero.title") }}</h1>
       <ScrollTo class="button__join" linkType="button" to="contact">{{
@@ -29,11 +29,12 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hero {
   width: calc(100vw - 2 * var(--section-margin-mobile));
   height: calc(100vh - 2 * var(--section-margin-mobile));
   overflow: hidden;
+  position: relative;
   @include bg-fixed("@/assets/images/lpa1.jpg");
 
   @include respond-to("tablet-large") {
@@ -101,7 +102,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
     text-transform: uppercase;
   }
 
-  &__language-switcher {
+  &__contact-links {
     position: absolute;
     right: 0;
     top: 0;

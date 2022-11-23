@@ -29,11 +29,15 @@ import ScrollTo from "@/components/ScrollTo.vue";
 <style lang="scss">
 .navigation {
   position: absolute;
-  top: 0;
+  top: 5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   font-family: var(--font-metalsmith);
+
+  @include respond-to(tablet-large) {
+    top: 0;
+  }
 
   ul {
     list-style: none;
