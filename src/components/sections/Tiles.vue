@@ -4,28 +4,33 @@ import ScrollTo from "../ScrollTo.vue";
 const tiles = [
   {
     name: "storage",
-    link: "services",
+    link: "storage",
     bg: new URL(`../../assets/tiles/storage.jpg`, import.meta.url),
+    type: "ScrollTo",
   },
   {
     name: "lockers",
-    link: "services",
+    link: "storage",
     bg: new URL(`../../assets/tiles/lockers.jpg`, import.meta.url),
+    type: "ScrollTo",
   },
   {
     name: "second-hand",
-    link: "services",
+    link: "https://es.wallapop.com/app/user/samg-150019658-p8j31neyqy69/published",
     bg: new URL(`../../assets/tiles/second-hand.jpg`, import.meta.url),
+    type: "Link",
   },
   {
     name: "board-repair",
-    link: "services",
+    link: "storage",
     bg: new URL(`../../assets/tiles/board-repair.jpg`, import.meta.url),
+    type: "ScrollTo",
   },
   {
     name: "surf-art",
-    link: "services",
+    link: "storage",
     bg: new URL(`../../assets/tiles/surf-art.jpg`, import.meta.url),
+    type: "ScrollTo",
   },
 ];
 const oddTiles = Math.abs(tiles.length % 2) === 1;
@@ -36,16 +41,24 @@ const oddTiles = Math.abs(tiles.length % 2) === 1;
     <div class="tiles__content">
       <template v-for="(tile, index) in tiles" :key="index">
         <ScrollTo
-          class="tile"
-          :to="tile.link"
-          :style="{
-            '--bg': `url(${tile.bg})`,
-          }"
+          v-if="tile.type === 'ScrollTo'"
+            class="tile"
+            :to="tile.link"
+            :style="{'--bg': `url(${tile.bg})`}"
         >
           <h2 class="tile__title">
             {{ $t(`tiles.${tile.name}`) }}
           </h2>
         </ScrollTo>
+        <a v-else
+           class="tile"
+           :style="{'--bg': `url(${tile.bg})`}"
+           :href="tile.link"
+           target="_blank">
+          <h2 class="tile__title">
+            {{ $t(`tiles.${tile.name}`) }}
+          </h2>
+        </a>
       </template>
     </div>
   </section>
