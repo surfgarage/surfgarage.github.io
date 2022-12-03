@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import i18n from "../i18n.js";
 import Home from "./pages/Home.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 // import { h, resolveComponent } from "vue";
 import VueGtag from "vue-gtag";
 import 'virtual:windi.css'
@@ -27,7 +27,7 @@ const routes = [
 // }
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
