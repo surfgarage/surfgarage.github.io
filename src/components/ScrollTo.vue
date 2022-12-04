@@ -28,12 +28,12 @@ const scrollIntoView = (e) => {
 .button {
   border: 2px solid white;
   padding: 12px 50px;
-  color: white;
+  color: var(--c-white);
   display: block;
-  font-family: var(--font-myriad-semibold);
+  font-family: var(--font-avenir);
   text-transform: uppercase;
   min-width: 20rem;
   max-width: 25rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 </style>

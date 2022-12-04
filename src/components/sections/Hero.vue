@@ -11,6 +11,7 @@ import ContactLinks from "@/components/ContactLinks.vue";
     <ContactLinks class="hero__contact-links" :onlyIcons="true" />
     <div class="hero__foreground">
       <h1 class="hero__title">{{ $t("hero.title") }}</h1>
+      <h2 class="hero__subtitle">{{ $t("hero.subtitle") }}</h2>
       <ScrollTo class="button__join" linkType="button" to="contact">{{
         $t("hero.join-now")
       }}</ScrollTo>
@@ -76,29 +77,29 @@ import ContactLinks from "@/components/ContactLinks.vue";
 
   &__foreground {
     position: absolute;
-    top: 400px;
+    top: 350px;
     left: 50%;
     color: #fff;
     transform: translate(-50%, -60%);
     text-align: center;
     width: 80%;
 
-    //@include respond-to("tablet-large") {
-    //    top: 60%;
-    //}
+    @include respond-to(not-desktop) {
+        top: 60%;
+    }
   }
 
   &__title {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: var(--font-metalsmith);
     text-transform: lowercase;
   }
 
   &__subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-family: var(--font-myriad-condensed);
+    font-size: 2.28rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-avenir);
     text-transform: uppercase;
   }
 
@@ -128,6 +129,6 @@ import ContactLinks from "@/components/ContactLinks.vue";
 }
 
 .button__join {
-  margin: 30px auto 0;
+  margin: 2rem auto 0;
 }
 </style>
