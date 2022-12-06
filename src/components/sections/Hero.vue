@@ -85,7 +85,7 @@ import ContactLinks from "@/components/ContactLinks.vue";
     width: 80%;
 
     @include respond-to(not-desktop) {
-        top: 60%;
+        top: 65%;
     }
   }
 
