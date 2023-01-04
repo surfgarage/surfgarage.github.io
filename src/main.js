@@ -3,7 +3,6 @@ import App from "./App.vue";
 import i18n from "../i18n.js";
 import Home from "./pages/Home.vue";
 import { createRouter, createWebHistory } from "vue-router";
-// import { h, resolveComponent } from "vue";
 import VueGtag from "vue-gtag";
 
 const routes = [
@@ -17,13 +16,6 @@ const routes = [
     component: Home,
   },
 ];
-
-// component: {
-//     render: () => h(resolveComponent("router-view")),
-//         children: [{
-//         path: '/', name: 'home', component: Home
-//     }]
-// }
 
 const router = createRouter({
   history: createWebHistory(),
