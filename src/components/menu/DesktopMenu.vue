@@ -34,6 +34,7 @@ import ScrollTo from "@/components/ScrollTo.vue";
   transform: translateX(-50%);
   width: 100%;
   font-family: var(--font-metalsmith);
+  z-index: 1;
 
   @include respond-to(tablet-large) {
     top: 0;

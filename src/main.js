@@ -4,6 +4,7 @@ import i18n from "../i18n.js";
 import Home from "./pages/Home.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import VueGtag from "vue-gtag";
+import { vueVimeoPlayer } from "vue-vimeo-player";
 
 const routes = [
   {
@@ -42,4 +43,5 @@ createApp(App)
     router,
     enabled: true,
   })
+  .use(vueVimeoPlayer)
   .mount("#app");

@@ -54,6 +54,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
 <style lang="scss">
 .contact-links {
+  z-index: 1;
   &__link {
     display: flex;
     align-items: center;
