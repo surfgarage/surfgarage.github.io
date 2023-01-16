@@ -19,14 +19,17 @@ import ContactLinks from "@/components/ContactLinks.vue";
     <ScrollTo to="tiles" class="hero__arrow">
       <arrowDown class="hero__arrow-icon" />
     </ScrollTo>
-    <!--        <div class="hero__video-bg">-->
-    <!--        <iframe src="https://www.youtube.com/embed/Vqq3NEuJGps?modestbranding=1&controls=0&autoplay=1&mute=1&loop=1"-->
-    <!--                title="YouTube video player"-->
-    <!--                frameborder="0"-->
-    <!--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">-->
-    <!--        </iframe>-->
-    <!--            <img :src="bg" alt="Surf Garage"/>-->
-    <!--        </div>-->
+    <div class="hero__video-bg">
+      <div class="hero__dark-bg"></div>
+      <iframe
+        src="https://www.youtube.com/embed/9uWhmMznrDw?autoplay=1&loop=1&&playlist=9uWhmMznrDw&mute=1&controls=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fsurfgarage.es"
+        title="Surf Garage Video PLayer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
   </section>
 </template>
 
@@ -44,10 +47,19 @@ import ContactLinks from "@/components/ContactLinks.vue";
     position: relative;
   }
 
+  &__dark-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
   &__video-bg {
     width: 100vw;
     height: 100vh;
-
     iframe {
       position: absolute;
       top: 50%;
@@ -56,6 +68,7 @@ import ContactLinks from "@/components/ContactLinks.vue";
       height: 100vh;
       transform: translate(-50%, -50%);
       pointer-events: none;
+      z-index: 1;
 
       @media (min-aspect-ratio: 16/9) {
         /* height = 100 * (9 / 16) = 56.25 */
@@ -68,24 +81,23 @@ import ContactLinks from "@/components/ContactLinks.vue";
       }
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @include respond-to(not-desktop) {
+      display: none;
     }
   }
 
   &__foreground {
     position: absolute;
-    top: 350px;
+    top: 400px;
     left: 50%;
     color: #fff;
     transform: translate(-50%, -60%);
     text-align: center;
     width: 80%;
+    z-index: 3;
 
     @include respond-to(not-desktop) {
-        top: 65%;
+      top: 68%;
     }
   }
 
@@ -107,6 +119,7 @@ import ContactLinks from "@/components/ContactLinks.vue";
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 3;
   }
 
   &__arrow {
@@ -116,6 +129,7 @@ import ContactLinks from "@/components/ContactLinks.vue";
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 
     @include respond-to(tablet-large) {
       display: none;

@@ -34,6 +34,7 @@ import ScrollTo from "@/components/ScrollTo.vue";
   transform: translateX(-50%);
   width: 100%;
   font-family: var(--font-metalsmith);
+  z-index: 3;
 
   @include respond-to(tablet-large) {
     top: 0;
@@ -76,7 +77,7 @@ import ScrollTo from "@/components/ScrollTo.vue";
   padding: 0 30px;
 
   &__svg {
-    width: 220px;
+    width: 250px;
     /*height: 220px;*/
   }
 }
