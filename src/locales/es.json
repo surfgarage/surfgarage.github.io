@@ -45,11 +45,22 @@
     "title": "Precios",
     "monthly": {
       "title": "1 mes",
-      "price": "€35/mes"
+      "price": "€35/mes",
     },
     "3months": {
       "title": "3 meses",
-      "price": "€30/mes"
+      "price": "1 pago de €90",
+      "perMonth": "€30/mes"
+    },
+    "6months": {
+      "title": "6 meses",
+      "price": "1 pago de €170",
+      "perMonth": "€28/mes"
+    },
+    "1year": {
+      "title": "1 ano",
+      "price": "1 pago de €300",
+      "perMonth": "€25/mes"
     }
   },
   "contact": {

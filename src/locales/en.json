@@ -49,7 +49,18 @@
     },
     "3months": {
       "title": "3 months",
-      "price": "€30/month"
+      "price": "1 payment of €90",
+      "perMonth": "€30/month"
+    },
+    "6months": {
+      "title": "6 months",
+      "price": "1 payment of €170",
+      "perMonth": "€28/month"
+    },
+    "1year": {
+      "title": "1 year",
+      "price": "1 payment of €300",
+      "perMonth": "€25/month"
     }
   },
   "contact": {
